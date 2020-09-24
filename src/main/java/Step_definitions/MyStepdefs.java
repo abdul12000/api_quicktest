@@ -66,4 +66,12 @@ public class MyStepdefs extends BaseSteps {
        assertThat(responseForPostCall.body().jsonPath().get("body"), is(body));
         assertNotNull(responseForPostCall.body().jsonPath().get("id"));
     }
+
+    @When("i search for comment with {string} with a GET method")
+    public void iSearchForCommentWithWithAGETMethod(String arg0) {
+    }
+
+    @Then("i the correct {string}, {string}, {string} and {string} are returned with status code of {int}")
+    public void iTheCorrectAndAreReturnedWithStatusCodeOf(String arg0, String arg1, String arg2, String arg3, int arg4) {
+    }
 }

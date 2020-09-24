@@ -22,3 +22,11 @@ Feature: Imagine you are building a social network. Starting from simple functio
       | uId   | title                        | body                        |
       | 10009 | this is my Test title        | this is my test body        |
       | 10027 | this is my second Test title | this is my second test body |
+
+  Scenario Outline: 3. Test that existing comments can be retreived with a GET request
+    Given service is up and running
+    When i search for comment with "<id>" with a GET method
+    Then i the correct "<id>", "<name>", "<email>" and "<body>" are returned with status code of 200
+    Examples:
+      | id | name                                      | email                  | body                                                                                                                                                                        |
+      | 2  | quo vero reiciendis velit similique earum | Jayne_Kuhic@sydney.com | est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et |
